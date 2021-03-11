@@ -11,8 +11,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Aissaio\\QuickbooksCrud\\": "src/",
-            "Aissaio\\QuickbooksCrud\\Models": "src/Models"
+            "Aissaio\\QuickbooksCrud\\": "src/"
         }
     },
     "extra": {
