@@ -2,6 +2,7 @@
 
 namespace Aissaio\QuickBooksCrud;
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 
 class QuickbooksCrudServiceProvider extends ServiceProvider {
@@ -10,14 +11,14 @@ class QuickbooksCrudServiceProvider extends ServiceProvider {
 
     public function register()
     {
-          $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
 
     public function boot(){
         // publish 
         $this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations')
+            __DIR__.'/../database/migrations/2020_06_07_080742_create_quick_book_configs_table.php' => database_path('migrations/2020_06_07_080742_create_quick_book_configs_table.php')
         ],
         'quickbook-crud-migrations'
         );

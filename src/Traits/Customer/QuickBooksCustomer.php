@@ -4,24 +4,12 @@
 namespace Aissaio\QuickbooksCrud\Traits\Customer;
 
 
-use App\Traits\Model\QuickBooks\QuickBooksTrait;
 use App\User;
 use Exception;
+use Aissaio\QuickbooksCrud\Traits\QuickBooksTrait;
 use Illuminate\Support\Arr;
-use Laravel\Telescope\Http\Controllers\DumpController;
-use QuickBooksOnline\API\Core\ServiceContext;
-use QuickBooksOnline\API\Data\IPPCustomer;
-use QuickBooksOnline\API\Data\IPPEmailAddress;
-use QuickBooksOnline\API\Data\IPPPhysicalAddress;
 use QuickBooksOnline\API\DataService\DataService;
-use QuickBooksOnline\API\Exception\IdsException;
-use QuickBooksOnline\API\PlatformService\PlatformService;
-use QuickBooksOnline\API\Core\Http\Serialization\XmlObjectSerializer;
-use QuickBooksOnline\API\Data\IPPIntuitEntity;
 use QuickBooksOnline\API\Facades\Customer;
-use QuickBooksOnline\API\QueryFilter\QueryMessage;
-use QuickBooksOnline\API\ReportService\ReportName;
-use Symfony\Component\VarDumper\Cloner\Data;
 
 trait QuickBooksCustomer
 {
