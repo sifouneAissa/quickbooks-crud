@@ -3,17 +3,12 @@
 
 namespace Aissaio\QuickbooksCrud\Repositories;
 
+use Aissaio\QuickBooksCrud\Models\QuickBookConfig;
 use App\Models\Config\Setting;
-use App\QuickBookConfig;
-use App\Repositories\Interfaces\Config\quickBookRepositoryInterface;
-use App\Repositories\Interfaces\Config\SettingRepositoryInterface;
 use App\Traits\DataStructure\ArrayManipulator;
 use App\Traits\Model\ModelOperations;
 use App\Traits\Repository\RepositoriesRelations;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 
 class quickBookRepository implements quickBookRepositoryInterface {
 

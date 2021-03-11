@@ -10,17 +10,23 @@ class QuickbooksCrudServiceProvider extends ServiceProvider {
 
     public function register()
     {
-        
+          $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
 
     public function boot(){
         // publish 
         $this->publishes([
-            // __DIR__.'/config/phone_verification.php' => config_path('phone_verification.php'),
-
+            __DIR__.'/../database/migrations' => database_path('migrations')
         ],
-        // 'phone-verification-config'
+        'quickbook-crud-migrations'
+        );
+
+
+        $this->publishes([
+            __DIR__.'./Stubs/QuickBookConfigStub.php' => app_path('Models/QuickBookConfig.php')
+        ],
+        'quickbook-crud-models'
         );
 
         
